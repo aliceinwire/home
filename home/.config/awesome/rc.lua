@@ -37,7 +37,7 @@ end
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt -fg Black -bg White -rv +sb -e tmux"
+terminal = "urxvt -fn 'xft:Anonymice Powerline' -fg Black -bg White -rv +sb -e tmux"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 xsnap = "DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/screenshot/xsnap-$DATE.png"
