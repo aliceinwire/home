@@ -37,7 +37,8 @@ end
 beautiful.init("/usr/share/awesome/themes/default/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
-terminal = "urxvt -fn 'xft:Anonymice Powerline' -fg Black -bg White -rv +sb -e tmux"
+--terminal = "urxvt -fn 'xft:Anonymice Powerline' -fg Black -bg White -rv +sb -e tmux"
+terminal = "urxvt -fg Black -bg White -rv +sb -e tmux"
 editor = os.getenv("EDITOR") or "nano"
 editor_cmd = terminal .. " -e " .. editor
 xsnap = "DATE=`date +%d%m%Y_%H%M%S`; xsnap -nogui -file $HOME/screenshot/xsnap-$DATE.png"
@@ -377,4 +378,8 @@ client.add_signal("unfocus", function(c) c.border_color = beautiful.border_norma
 -- }}}
 awful.util.spawn_with_shell("xscreensaver -no-splash")
 awful.util.spawn_with_shell("/usr/libexec/lxpolkit")
+awful.util.spawn_with_shell('export XMODIFIERS="@im=ibus"')
+awful.util.spawn_with_shell('export GTK_IM_MODULE="ibus"')
+awful.util.spawn_with_shell('export QT_IM_MODULE="xim"')
+awful.util.spawn_with_shell("ibus-daemon -d -x")
 awful.util.spawn_with_shell("eval `ssh-agent`")
