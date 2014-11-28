@@ -19,4 +19,4 @@ fi
 alias wgetml='wget --load-cookies /home/alice/bin/wget-cookies.txt '
 alias notes='vim notes/$(date +"%d%m%Y").log'
 
-alias homeshick="$HOME/.homesick/repos/homeshick/home/.homeshick"
+source $HOME/.homesick/repos/homeshick/home/.homeshick
