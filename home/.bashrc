@@ -16,7 +16,6 @@ fi
 
 
 # Put your fun stuff here.
-alias wgetml='wget --load-cookies /home/alice/bin/wget-cookies.txt '
-alias notes='vim notes/$(date +"%d%m%Y").log'
 
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 source $HOME/.homesick/repos/homeshick/home/.homeshick
